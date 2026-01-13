@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Meter – Free Diabetes Tracker</title>
+    <meta name="description" content="Track glucose, insulin & meals. Simple, private, always free.">
+    <meta property="og:title" content="Sugar Meter – Free Diabetes Tracker">
+    <meta property="og:description" content="Track glucose, insulin & meals. Simple, private, always free.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sugarmeter.app">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #71717a;
+            font-weight: 400;
+            margin-bottom: 48px;
+        }
+
+        .store-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #18181b;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 500;
+            border: 1px solid #27272a;
+            transition: all 0.2s ease;
+            min-width: 220px;
+        }
+
+        .store-btn:hover {
+            background: #27272a;
+            border-color: #3f3f46;
+            transform: translateY(-2px);
+        }
+
+        .store-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        .links a {
+            color: #52525b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: #a1a1aa;
+        }
+
+        .footer {
+            color: #3f3f46;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #52525b;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #71717a;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .store-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">💙</div>
+
+        <h1>Sugar Meter</h1>
+        <p class="tagline">Free Diabetes Tracker</p>
+
+        <div class="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.georgebacanu.sugar_meter" class="store-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-4.31c.34.27.64.71.64 1.19s-.09.85-.44 1.12l-2.77 1.6-2.5-2.5 2.5-2.5 2.57 1.09zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z" />
+                </svg>
+                Google Play
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="mailto:george@sugarmeter.app">Contact</a>
+        </div>
+
+        <p class="footer">Created with 💙 by <a href="mailto:george@sugarmeter.app">George Bacanu</a></p>
+    </div>
+</body>
+
+</html>
