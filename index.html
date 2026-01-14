@@ -23,172 +23,137 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #ffffff;
-            color: #1a1a1a;
+            background: #fafafa;
+            color: #111;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         .hero {
-            flex: 1;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px 40px;
-            gap: 80px;
+            padding: 80px 60px;
+            gap: 100px;
         }
 
         .mockup {
             flex-shrink: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
         }
 
         .mockup img {
-            max-height: 600px;
+            max-height: 580px;
             width: auto;
-            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+            border-radius: 32px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
         }
 
         .content {
-            max-width: 480px;
-            text-align: left;
+            max-width: 420px;
         }
 
-        .app-icon {
-            width: 80px;
-            height: 80px;
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            color: #0284c7;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
             margin-bottom: 24px;
-            border-radius: 18px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.02em;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
-            color: #1a1a1a;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #111 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .tagline {
-            font-size: 1.5rem;
-            color: #6b7280;
+            font-size: 1.25rem;
+            color: #666;
             font-weight: 400;
-            margin-bottom: 16px;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            color: #6b7280;
             line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 32px;
-        }
-
-        .feature-tag {
-            background: #f0f9ff;
-            color: #0284c7;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .store-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
         }
 
         .store-btn {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 12px;
-            background: #1a1a1a;
-            color: #ffffff;
+            background: #111;
+            color: #fff;
             text-decoration: none;
-            padding: 16px 32px;
-            border-radius: 14px;
+            padding: 18px 32px;
+            border-radius: 16px;
             font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            width: fit-content;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 48px;
         }
 
         .store-btn:hover {
-            background: #333333;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .store-btn svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
         }
 
         .links {
             display: flex;
-            gap: 24px;
+            gap: 32px;
         }
 
         .links a {
-            color: #9ca3af;
+            color: #aaa;
             text-decoration: none;
             font-size: 0.9rem;
+            font-weight: 500;
             transition: color 0.2s;
         }
 
         .links a:hover {
-            color: #1a1a1a;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 24px;
-            color: #9ca3af;
-            font-size: 0.9rem;
-            border-top: 1px solid #f3f4f6;
-        }
-
-        .footer a {
-            color: #6b7280;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: #1a1a1a;
+            color: #111;
         }
 
         @media (max-width: 900px) {
             .hero {
                 flex-direction: column;
-                padding: 40px 24px;
-                gap: 40px;
-            }
-
-            .content {
+                padding: 60px 32px;
+                gap: 48px;
                 text-align: center;
             }
 
-            .app-icon {
-                margin-left: auto;
-                margin-right: auto;
+            .mockup {
+                order: 1;
             }
 
-            .features {
-                justify-content: center;
-            }
-
-            .store-buttons {
-                align-items: center;
+            .content {
+                order: 2;
             }
 
             .links {
@@ -200,7 +165,7 @@
             }
 
             .mockup img {
-                max-height: 450px;
+                max-height: 400px;
             }
         }
 
@@ -210,15 +175,16 @@
             }
 
             .tagline {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .store-btn {
                 width: 100%;
+                justify-content: center;
             }
 
-            .mockup img {
-                max-height: 380px;
+            .hero {
+                padding: 40px 24px;
             }
         }
     </style>
@@ -227,34 +193,22 @@
 <body>
     <section class="hero">
         <div class="mockup">
-            <img src="mockup.png" alt="Sugar Meter App Screenshot">
+            <img src="mockup.png" alt="Sugar Meter App">
         </div>
 
         <div class="content">
-            <img src="icon.png" alt="Sugar Meter Icon" class="app-icon">
+            <span class="badge">✨ Free Forever</span>
 
             <h1>Sugar Meter</h1>
-            <p class="tagline">Free Diabetes Tracker</p>
-            <p class="description">Track glucose, insulin & meals in one beautiful app. Simple, private, and always
-                free.</p>
+            <p class="tagline">Track glucose, insulin and meals. Simple. Private. Always free.</p>
 
-            <div class="features">
-                <span class="feature-tag">📊 Glucose Tracking</span>
-                <span class="feature-tag">💉 Insulin Log</span>
-                <span class="feature-tag">🍽️ Meal Tracking</span>
-                <span class="feature-tag">📋 PDF Reports</span>
-                <span class="feature-tag">🔒 100% Private</span>
-            </div>
-
-            <div class="store-buttons">
-                <a href="https://play.google.com/store/apps/details?id=com.georgebacanu.sugar_meter" class="store-btn">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-4.31c.34.27.64.71.64 1.19s-.09.85-.44 1.12l-2.77 1.6-2.5-2.5 2.5-2.5 2.57 1.09zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z" />
-                    </svg>
-                    Get it on Google Play
-                </a>
-            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.georgebacanu.sugar_meter" class="store-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-4.31c.34.27.64.71.64 1.19s-.09.85-.44 1.12l-2.77 1.6-2.5-2.5 2.5-2.5 2.57 1.09zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z" />
+                </svg>
+                Get on Google Play
+            </a>
 
             <div class="links">
                 <a href="privacy.html">Privacy</a>
@@ -263,10 +217,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="footer">
-        Created with 💙 by <a href="mailto:george@sugarmeter.app">George Bacanu</a>
-    </footer>
 </body>
 
 </html>
